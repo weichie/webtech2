@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url('imgs/hero-blue.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.container{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+/* TOP NAV
+============================= */
+.top-nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 0;
+	list-style-type: none;
+}
+.top-nav ul li:first-child 	{margin-right: auto;}
+.top-nav img 				{width: 50px;}
+
+/* TITLES
+============================= */
+.titles ul{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	justify-content: space-between;
+	padding: 0;
+}
+.titles ul li{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.titles ul li h1{
+	margin-top: 0;
+	color: #fff;
+	text-align: center;
+}
+.titles ul li h1 span 		{display: block;}
+
+.titles ul li:first-child,
+.titles ul li:last-child{
+	text-transform: uppercase;
+	color: yellow;
+	font-weight: 400;
+	font-size: 1.2em;
+	align-self: flex-end;
+}
+
+/* CONTENT 
+============================= */
+.row{
+	margin-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.col-2 		{width: 49%;}
+.col-3 		{width: 31.33%;}
+.col-4 		{width: 23%;}
+
+[class*="col-"]{
+	height: 250px;
+	background: url('imgs/img1.jpg') no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	text-transform: uppercase;
+}
+[class*="col-"] h4{
+	align-self: flex-end;
+	color: yellow;
+	padding-left: 20px;
+	font-weight: 400;
+}
+[class*="col-"] h3{
+	align-self: flex-end;
+}
+
+/* FOOTER 
+============================= */
+footer{
+	margin-top: 75px;
+	height: 50px;
+}

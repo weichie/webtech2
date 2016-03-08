@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Advanced JS</title>
+	<link rel="stylesheet" href="oef1.css">
+</head>
+<body>
+	<h1>Todo App</h1>
+	<ul>
+		<li id="todo1">Learn more about JS</li>
+		<li id="todo2">eat php for breakfast</li>
+	</ul>
+
+	<script src="framework.js"></script>
+	<script>
+		$("li").css("color","red").on("click", function(){
+			$(this).markAsDone();
+		});
+	</script>
+</body>
+</html>
