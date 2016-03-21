@@ -12,10 +12,18 @@ var WrapperElement = function(element){
 WrapperElement.prototype.toggleClass = function(className){
 	if(this.isArray){
 		for(var i = 0; i < this.elements.length; i++){
-
+			if(this.element.class == className){
+				this.element[i].removeClass(className);
+			}else{
+				this.element[i].addClass(className);	
+			}
 		}
 	}else{
-
+		if(this.element.class == className){
+			this.element.removeClass(className);
+		}else{
+			this.element.addClass(className);
+		}
 	}
 	return this;
 }
@@ -67,12 +75,12 @@ WrapperElement.prototype.click = function(action){
 WrapperElement.prototype.val = function(value){
 	if(this.isArray){
 		for(var i = 0; i < this.elements.length; i++){
-
+			value = this.element[i].value;
 		}
 	}else{
-
+		value = this.element.value;
 	}
-	return this;
+	return value;
 }
 
 var $ = function(selector){

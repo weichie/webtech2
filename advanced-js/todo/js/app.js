@@ -1,9 +1,9 @@
 /* ---------------------------------------------------- APP ---------------------------------- */
-$("#todo-item1").click(function(){ 								// make sure we can click on an element
+$("#todo-item1").click(function(){ 						// make sure we can click on an element
     $(this).toggleClass("done"); 						// when we click on any list item, add the class done if it doesn't exist yet on the element or remove it when it exists
 });
 
-/*$("#add-item-text").keyup(function(e){ 					// make sure we can detect a keyup event
+/*$("#add-item-text").keyup(function(e){ 				// make sure we can detect a keyup event
 	if(e.which === 13)
 	{
 		// this is the ENTER key with code 13

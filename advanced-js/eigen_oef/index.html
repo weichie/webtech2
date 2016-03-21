@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oefening advanced JS</title>
+</head>
+<body>
+	<h1>Todo App</h1>
+	<ul>
+		<li id="todo-item1">Learn Angular</li>
+		<li id="todo-item2">Learn Node.js</li>
+		<li id="todo-item3">Learn MongoDB</li>
+	</ul>
+	
+	<script>
+
+		HTMLElement.prototype.changeColor = function(color){
+			this.style["color"] = color;
+		}
+		HTMLElement.prototype.markAsDone = function(){
+			this.style.textDecoration = "line-through";
+			this.style.color = "grey";
+		}
+		function WrapperElement(el){
+			this.element = el;
+			this.isArray = el.length > 1 ? true : false;
+		}
+
+		WrapperElement.prototype.addClass = function(classname){
+			this.element.className = classname;
+		}
+
+		function $(selector){
+			var firstChar = selector.substring(0,1);
+			switch(firstChar){
+				case "#":
+					var select = selector.substring(1, selector.length);
+					return new WrapperElement(document.getElementById(select));
+					break;
+			}
+		}
+
+		$('#todo-item2').changeColor("Red");
+	</script>
+</body>
+</html>
