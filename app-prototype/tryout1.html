@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App prototype tryout 1</title>
+</head>
+<body>
+	
+	<script>
+		var Person = function(naam, leeftijd){
+			this.naam = naam;
+			this.leeftijd = leeftijd;
+
+			this.sayname = function(){
+				console.log("Hi, my name is " + naam);
+			}
+		}
+
+		var Student = function(naam, leeftijd, studies){
+			this.prototype = new Person(naam, leeftijd);
+			this.studies = studies;
+
+			this.sayname = function(){
+				this.prototype.sayname();
+				console.log("I study " + this.studies);
+			}
+		}
+
+		var steve = new Person('Steve', 33);
+		var bill = new Student('Bill', 22, 'IMD');
+
+		steve.sayname();
+		bill.sayname();
+	</script>
+</body>
+</html>
